@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="emp1" class="com.example.demo.model.Employee">
+ <property name="id" value="1"></property>
+ <property name="name" value="aaa"></property>
+ <property name="dept" value="1"></property>
+ </bean>
+  <bean id="emp2" class="com.example.demo.model.Employee">
+ <property name="id" value="2"></property>
+ <property name="name" value="bbb"></property>
+ <property name="dept" value="4"></property>
+ </bean>
+  <bean id="emp3" class="com.example.demo.model.Employee">
+ <property name="id" value="3"></property>
+ <property name="name" value="ccc"></property>
+ <property name="dept" value="1"></property>
+ </bean>
+  <bean id="emp4" class="com.example.demo.model.Employee">
+ <property name="id" value="4"></property>
+ <property name="name" value="ddd"></property>
+ <property name="dept" value="4"></property>
+ </bean>
+  <bean id="dept1" class="com.example.demo.model.Department">
+ <property name="id" value="1"></property>
+ <property name="name" value="IT"></property>
+ </bean>
+  <bean id="dept2" class="com.example.demo.model.Department">
+ <property name="id" value="4"></property>
+ <property name="name" value="Account"></property>
+ </bean>
+ <bean id="empList" class="java.util.ArrayList">
+ <constructor-arg>
+ <list>
+ <ref bean="emp1"/>
+ <ref bean="emp2"/>
+ <ref bean="emp3"/>
+ <ref bean="emp4"/>
+ </list>
+ </constructor-arg>
+ </bean>
+ <bean id="deptList" class="java.util.ArrayList">
+ <constructor-arg>
+ <list>
+ <ref bean="dept1"/>
+ <ref bean="dept2"/>
+ </list>
+ </constructor-arg>
+ </bean>
+ </beans>
